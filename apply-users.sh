@@ -1,4 +1,5 @@
 #!/bin/sh
 pushd ~/.dotfiles
-home-manager switch -f ./users/mario/home.nix
+nix build .#homeManagerConfigurations.mario.activationPackage
+./result/activate
 popd
